@@ -40,7 +40,7 @@ TEST(GroundTextureSLAM, RejectBadThreshold) {
           options, start_image_eigen, start_pose_eigen, start_covariance_eigen),
       std::invalid_argument);
   cv::Mat start_image_cv = cv::Mat::zeros(400, 600, CV_8U);
-  gtsam::Pose2 start_pose_gtsam = gtsam::Pose2::identity();
+  gtsam::Pose2 start_pose_gtsam = gtsam::Pose2::Identity();
   gtsam::Matrix33 start_covariance_gtsam = gtsam::Matrix33::Identity();
   ASSERT_THROW(
       ground_texture_slam::GroundTextureSLAM(

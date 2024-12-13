@@ -50,7 +50,7 @@ auto TransformEstimator::estimateTransform(
   }
   // Initialize the graph
   gtsam::Values initial_guess;
-  initial_guess.insert(/*j=*/0, gtsam::Pose2::identity());
+  initial_guess.insert(/*j=*/0, gtsam::Pose2::Identity());
   gtsam::ExpressionFactorGraph graph;
   // This is the pose that is estimated to fit the functions. The underscore is
   // GTSAM's convention for expressions vs defined values.

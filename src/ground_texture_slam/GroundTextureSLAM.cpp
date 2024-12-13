@@ -13,7 +13,7 @@ GroundTextureSLAM::GroundTextureSLAM(const Options& options,
                                      const gtsam::Matrix33& start_covariance) {
   setNumericOptions(options);
   createComponents(options);
-  previous_estimated_transform = gtsam::Pose2::identity();
+  previous_estimated_transform = gtsam::Pose2::Identity();
   createGraph(start_image, start_pose, start_covariance);
 }
 
@@ -24,7 +24,7 @@ GroundTextureSLAM::GroundTextureSLAM(
     const Eigen::Matrix3d& start_covariance) {
   setNumericOptions(options);
   createComponents(options);
-  previous_estimated_transform = gtsam::Pose2::identity();
+  previous_estimated_transform = gtsam::Pose2::Identity();
   cv::Mat start_image_cv(start_image.rows(), start_image.cols(), CV_8U);
   cv::eigen2cv(start_image, start_image_cv);
   gtsam::Pose2 start_pose_gtsam(start_pose(0), start_pose(1), start_pose(2));
